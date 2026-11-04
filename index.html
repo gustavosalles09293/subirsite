@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SubirSite — Hospedagem de sites 100% grátis</title>
+  <meta name="description" content="Suba seu site em segundos, de graça. Arraste a pasta do seu site, e o SubirSite publica com HTTPS, CDN global e domínio próprio. Sem cartão de crédito." />
+  <meta name="theme-color" content="#0d0d14" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ff6d5a'/%3E%3Cpath d='M32 46V22M22 31l10-10 10 10' stroke='%23fff' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ CABEÇALHO ============ -->
+  <header class="hd" id="topo">
+    <div class="ct hd__in">
+      <a href="#topo" class="lg" aria-label="SubirSite">
+        <span class="lg__ic"><svg viewBox="0 0 24 24"><path d="M12 17V7M7.5 11.5 12 7l4.5 4.5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>subir<b>site</b></span>
+      </a>
+      <nav class="nv" id="nv">
+        <a href="#teste">Testar agora</a>
+        <a href="#como">Como funciona</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#gratis">Grátis</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+      <div class="hd__act">
+        <button class="bt bt--gh" data-open-login>Entrar</button>
+        <a href="#cadastro" class="bt bt--pr">Cadastrar</a>
+        <button class="hb" id="hb" aria-label="Menu"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ BANNER ============ -->
+  <section class="hero">
+    <div class="hero__img"><img src="img/hero.jpg" alt="Data center com sites sendo enviados para a nuvem" /></div>
+    <div class="hero__dots"></div>
+    <div class="hero__shade"></div>
+    <div class="ct hero__in">
+      <div class="hero__txt">
+        <a href="#gratis" class="chip an"><span class="chip__new">NOVO</span> 100% grátis · sem cartão de crédito <i>→</i></a>
+        <h1 class="hero__h">
+          <span class="ln"><span>Suba seu site.</span></span>
+          <span class="ln"><span class="co">Grátis.</span> <span class="vi">Em segundos.</span></span>
+        </h1>
+        <p class="hero__p an">Arraste a pasta do seu site e pronto: ele vai para o ar com HTTPS, CDN global e domínio próprio. Sem servidor, sem configuração, sem pagar nada.</p>
+        <div class="hero__cta an">
+          <a href="#cadastro" class="bt bt--pr bt--lg">Começar grátis <i>→</i></a>
+          <a href="#teste" class="bt bt--gh bt--lg"><svg viewBox="0 0 24 24" width="16"><path d="M12 16V4m-5 5 5-5 5 5M4 20h16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Testar upload</a>
+        </div>
+        <div class="hero__proof an">
+          <div class="avs"><span style="--h:8">AM</span><span style="--h:260">RL</span><span style="--h:160">JP</span><span style="--h:30">CS</span></div>
+          <p><b>+48.000 sites</b> no ar com o SubirSite</p>
+        </div>
+      </div>
+      <div class="term an">
+        <div class="term__top"><i></i><i></i><i></i><span>terminal</span></div>
+        <pre id="heroTerm"></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGOS ============ -->
+  <div class="strip">
+    <div class="strip__row">
+      <span>HTML</span><b>•</b><span>React</span><b>•</b><span>Vue</span><b>•</b><span>Next.js (estático)</span><b>•</b><span>Astro</span><b>•</b><span>Svelte</span><b>•</b><span>WordPress exportado</span><b>•</b><span>Landing pages</span><b>•</b><span>Portfólios</span><b>•</b>
+      <span>HTML</span><b>•</b><span>React</span><b>•</b><span>Vue</span><b>•</b><span>Next.js (estático)</span><b>•</b><span>Astro</span><b>•</b><span>Svelte</span><b>•</b><span>WordPress exportado</span><b>•</b><span>Landing pages</span><b>•</b><span>Portfólios</span><b>•</b>
+    </div>
+  </div>
+
+  <!-- ============ TESTE: CANVAS DE NÓS ============ -->
+  <section class="flow" id="teste">
+    <div class="ct">
+      <div class="sh">
+        <span class="kk">// teste agora</span>
+        <h2 class="h2">Arraste. Solte. <span class="co">No ar.</span></h2>
+        <p>Experimente: arraste a pasta ou os arquivos do seu site para o primeiro nó e veja o fluxo de publicação rodando.</p>
+      </div>
+      <div class="canvas" id="canvas">
+        <div class="canvas__bar">
+          <span class="canvas__name"><i></i> Workflow: publicar-site</span>
+          <span class="canvas__tools"><em>Ativo</em><button class="bt bt--sm bt--pr" id="runDemo">▶ Executar com exemplo</button></span>
+        </div>
+        <svg class="wires" id="wires" aria-hidden="true"></svg>
+        <div class="nodes">
+          <label class="node node--drop" id="dropNode" data-i="0">
+            <input type="file" id="fileIn" multiple webkitdirectory hidden />
+            <span class="node__ic" style="--c:#ff6d5a"><svg viewBox="0 0 24 24"><path d="M12 16V4m-5 5 5-5 5 5M4 20h16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
+            <b>Upload</b><small id="dropTxt">Arraste a pasta aqui<br/>ou clique</small>
+            <span class="port port--out"></span><span class="node__ok">✓</span>
+          </label>
+          <div class="node" data-i="1">
+            <span class="port port--in"></span>
+            <span class="node__ic" style="--c:#7b61ff"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <b>Otimizar</b><small>minifica e comprime</small>
+            <span class="port port--out"></span><span class="node__ok">✓</span>
+          </div>
+          <div class="node" data-i="2">
+            <span class="port port--in"></span>
+            <span class="node__ic" style="--c:#29b6f6"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 12h16M12 4c3 3 3 13 0 16M12 4c-3 3-3 13 0 16" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></span>
+            <b>CDN global</b><small>32 países</small>
+            <span class="port port--out"></span><span class="node__ok">✓</span>
+          </div>
+          <div class="node" data-i="3">
+            <span class="port port--in"></span>
+            <span class="node__ic" style="--c:#20c997"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2" fill="none"/></svg></span>
+            <b>HTTPS</b><small>certificado grátis</small>
+            <span class="port port--out"></span><span class="node__ok">✓</span>
+          </div>
+          <div class="node node--end" data-i="4">
+            <span class="port port--in"></span>
+            <span class="node__ic" style="--c:#ffb020"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <b>No ar</b><small id="liveUrl">aguardando…</small>
+            <span class="node__ok">✓</span>
+          </div>
+        </div>
+        <div class="log" id="log"><span class="log__h">Execução</span><div id="logBody"><p class="mut">Nenhuma execução ainda. Arraste seus arquivos para o nó “Upload”.</p></div></div>
+        <div class="result" id="result" hidden>
+          <div><b>🎉 Seu site está pronto para ir ao ar!</b><span>Crie sua conta grátis para publicar em <code id="resUrl">meusite.subirsite.com.br</code></span></div>
+          <a href="#cadastro" class="bt bt--pr">Criar conta e publicar →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3D: FLUXO COM ROLAGEM ============ -->
+  <section class="tri" id="como">
+    <div class="tri__pin">
+      <canvas id="flow3d"></canvas>
+      <div class="tri__ui">
+        <span class="kk tri__kk">// como funciona</span>
+        <div class="tri__steps">
+          <article class="ts on"><span>01</span><h3>Você envia os arquivos</h3><p>Arraste uma pasta, um .zip ou conecte seu GitHub. HTML, CSS, JS, imagens — tudo é aceito.</p></article>
+          <article class="ts"><span>02</span><h3>Nós otimizamos tudo</h3><p>Imagens comprimidas, código minificado e cache configurado automaticamente para carregar rápido.</p></article>
+          <article class="ts"><span>03</span><h3>Distribuímos pelo mundo</h3><p>Seu site é copiado para servidores em 32 países e entregue a partir do mais próximo do visitante.</p></article>
+          <article class="ts"><span>04</span><h3>Seu site está no ar</h3><p>Com HTTPS, domínio próprio ou subdomínio grátis e estatísticas de visitas. Pronto para compartilhar.</p></article>
+        </div>
+        <div class="tri__bar"><i id="triBar"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RECURSOS ============ -->
+  <section class="feat" id="recursos">
+    <div class="ct">
+      <div class="sh">
+        <span class="kk">// recursos</span>
+        <h2 class="h2">Tudo que um site precisa.<br/><span class="vi">Nada que você precise pagar.</span></h2>
+      </div>
+      <div class="bento">
+        <article class="bx bx--ph bx--tall"><img src="img/foto1.jpg" alt="Desenvolvedor enviando pasta do site" /><div class="bx__cap"><h3>Deploy arrastando a pasta</h3><p>Sem FTP, sem painel complicado. Solte a pasta e seu site está no ar.</p></div></article>
+        <article class="bx nd"><span class="port port--in"></span><span class="node__ic" style="--c:#20c997">🔒</span><h3>HTTPS automático</h3><p>Certificado SSL gerado e renovado sozinho para todos os sites.</p><span class="port port--out"></span></article>
+        <article class="bx nd"><span class="port port--in"></span><span class="node__ic" style="--c:#29b6f6">🌐</span><h3>Domínio próprio</h3><p>Use seusite.com.br ou um subdomínio grátis seusite.subirsite.com.br.</p><span class="port port--out"></span></article>
+        <article class="bx nd"><span class="port port--in"></span><span class="node__ic" style="--c:#7b61ff">⚡</span><h3>CDN em 32 países</h3><p>Carregamento rápido para visitantes do Brasil e do mundo todo.</p><span class="port port--out"></span></article>
+        <article class="bx nd"><span class="port port--in"></span><span class="node__ic" style="--c:#ff6d5a">⟲</span><h3>Versões e rollback</h3><p>Cada upload vira uma versão. Voltou algo errado? Restaure com um clique.</p><span class="port port--out"></span></article>
+        <article class="bx bx--ph bx--wide"><img src="img/foto2.jpg" alt="Nós conectados representando automação" /><div class="bx__cap"><h3>Integração com GitHub</h3><p>Conecte um repositório e cada novo commit publica seu site automaticamente.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NÚMEROS / GLOBO ============ -->
+  <section class="glob">
+    <div class="glob__bg"><img src="img/foto3.jpg" alt="" /></div>
+    <div class="ct glob__in">
+      <div class="num"><b data-c="48000" data-s="+">0</b><span>sites hospedados</span></div>
+      <div class="num"><b data-c="99.99" data-d="2" data-s="%">0</b><span>de disponibilidade</span></div>
+      <div class="num"><b data-c="32">0</b><span>países na CDN</span></div>
+      <div class="num"><b data-c="0" data-p="R$ ">R$ 0</b><span>para sempre</span></div>
+    </div>
+  </section>
+
+  <!-- ============ GRÁTIS ============ -->
+  <section class="free" id="gratis">
+    <div class="ct">
+      <div class="sh sh--c">
+        <span class="kk">// preço</span>
+        <h2 class="h2">Grátis. <span class="co">De verdade.</span></h2>
+        <p>Sem período de teste, sem cartão de crédito, sem pegadinha.</p>
+      </div>
+      <div class="plans">
+        <div class="pc pc--hl">
+          <div class="pc__glow"></div>
+          <span class="pc__tag">Recomendado</span>
+          <h3>Grátis</h3>
+          <div class="pc__v">R$ 0<small>/para sempre</small></div>
+          <ul>
+            <li>Sites ilimitados</li><li>Subdomínio grátis .subirsite.com.br</li><li>Domínio próprio</li><li>HTTPS automático</li><li>CDN global</li><li>10 GB de banda por mês</li>
+          </ul>
+          <a href="#cadastro" class="bt bt--pr bt--lg bt--w">Criar conta grátis</a>
+        </div>
+        <div class="pc">
+          <h3>Pro <em>opcional</em></h3>
+          <div class="pc__v">R$ 19<small>/mês</small></div>
+          <ul>
+            <li>Tudo do plano Grátis</li><li>Banda ilimitada</li><li>Formulários e redirecionamentos</li><li>Proteção por senha</li><li>Suporte prioritário</li>
+          </ul>
+          <a href="#cadastro" class="bt bt--gh bt--lg bt--w">Começar no Grátis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEPOIMENTO ============ -->
+  <section class="testi ct">
+    <div class="testi__img"><img src="img/foto4.jpg" alt="Empreendedora vendo seu site no tablet" /></div>
+    <div class="testi__txt">
+      <span class="kk">// quem usa</span>
+      <blockquote>“Eu pagava hospedagem há anos para uma landing page simples. Subi no SubirSite em dois minutos e nunca mais paguei nada.”</blockquote>
+      <p><b>Juliana M.</b> — confeitaria artesanal, Curitiba</p>
+      <div class="testi__mini">
+        <div><b>2 min</b><span>para publicar</span></div>
+        <div><b>0,8s</b><span>de carregamento</span></div>
+        <div><b>R$ 0</b><span>por mês</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CADASTRO ============ -->
+  <section class="sg" id="cadastro">
+    <div class="ct sg__in">
+      <div class="sg__copy">
+        <span class="kk">// cadastro</span>
+        <h2 class="h2">Crie sua conta<br/><span class="co">e suba seu site.</span></h2>
+        <ul class="sg__ok"><li>Grátis para sempre</li><li>Sem cartão de crédito</li><li>Seu primeiro site no ar hoje</li></ul>
+      </div>
+      <form class="fm" id="signupForm" novalidate>
+        <div class="fm__body">
+          <div class="fm__hd"><span class="node__ic" style="--c:#ff6d5a">＋</span><div><b>Nova conta</b><small>Preencha os campos abaixo</small></div></div>
+          <label class="fi"><span>Nome</span><input name="nome" type="text" placeholder="Seu nome completo" autocomplete="off" /></label>
+          <label class="fi"><span>E-mail</span><input name="email" type="email" placeholder="voce@email.com" autocomplete="off" /></label>
+          <label class="fi"><span>Telefone</span><input name="telefone" id="s-tel" type="tel" placeholder="(00) 00000-0000" autocomplete="off" /></label>
+          <div class="fm__2">
+            <label class="fi"><span>Senha</span><input name="senha" type="password" placeholder="Mín. 6 caracteres" autocomplete="new-password" /></label>
+            <label class="fi"><span>Confirmar senha</span><input name="senha2" type="password" placeholder="Repita a senha" autocomplete="new-password" /></label>
+          </div>
+          <p class="fm__err" id="signupError"></p>
+          <button class="bt bt--pr bt--lg bt--w" type="submit">Confirmar</button>
+        </div>
+        <div class="fm__done" hidden>
+          <div class="done"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg></div>
+          <h3>Seus dados foram enviados para análise.</h3>
+          <p>Você receberá a liberação da sua conta no e-mail informado.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ DÚVIDAS ============ -->
+  <section class="fq ct" id="faq">
+    <div class="sh sh--c"><span class="kk">// dúvidas</span><h2 class="h2">Perguntas frequentes</h2></div>
+    <details><summary>É grátis mesmo?</summary><p>Sim. O plano Grátis não tem prazo de validade e não pede cartão de crédito. O plano Pro é opcional.</p></details>
+    <details><summary>Que tipo de site posso hospedar?</summary><p>Qualquer site estático: HTML, CSS, JavaScript, imagens e sites gerados por React, Vue, Astro, Next.js (export) e similares.</p></details>
+    <details><summary>Posso usar meu próprio domínio?</summary><p>Pode. Basta apontar o DNS do seu domínio para o SubirSite; o HTTPS é ativado automaticamente.</p></details>
+    <details><summary>Quantos sites posso subir?</summary><p>Quantos quiser. Não há limite de sites no plano Grátis.</p></details>
+  </section>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="ft">
+    <div class="ct ft__in">
+      <a href="#topo" class="lg"><span class="lg__ic"><svg viewBox="0 0 24 24"><path d="M12 17V7M7.5 11.5 12 7l4.5 4.5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>subir<b>site</b></span></a>
+      <p>Hospedagem de sites grátis · Feito no Brasil</p>
+      <p class="ft__c">© <span id="ano"></span> SubirSite</p>
+    </div>
+  </footer>
+
+  <!-- ============ POPUP LOGIN ============ -->
+  <div class="md" id="loginModal" aria-hidden="true">
+    <div class="md__bg" data-close></div>
+    <div class="md__box" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <span class="port port--in md__port"></span>
+      <button class="md__x" data-close aria-label="Fechar">✕</button>
+      <div class="fm__hd"><span class="node__ic" style="--c:#7b61ff">⏎</span><div><b id="loginTitle">Entrar no SubirSite</b><small>Acesse seu painel</small></div></div>
+      <form id="loginForm" novalidate>
+        <label class="fi"><span>Login</span><input id="l-user" type="text" placeholder="E-mail ou usuário" autocomplete="off" /></label>
+        <label class="fi"><span>Senha</span><input id="l-pass" type="password" placeholder="Sua senha" autocomplete="off" /></label>
+        <p class="fm__err" id="loginError"></p>
+        <button class="bt bt--pr bt--w" type="submit">Entrar</button>
+      </form>
+      <p class="md__f">Ainda não tem conta? <a href="#cadastro" data-close>Cadastre-se grátis</a></p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="importmap">{ "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }</script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
